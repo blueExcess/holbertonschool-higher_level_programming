@@ -7,7 +7,10 @@ if __name__ == '__main__':
         print("0 arguments.")
         exit()
     narg = len(argv) - 1
-    print('{} arguments:'.format(narg))
+    if len(argv) == 2:
+        print('{} argument:'.format(narg))
+    else:
+        print('{} arguments:'.format(narg))
     for x in argv:
         count += 1
         if count == 1:
