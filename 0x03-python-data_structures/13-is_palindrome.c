@@ -13,14 +13,15 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *seek = *head;
 	int i = 0, j = 0, test = 0;
-	int arr[20];
+	int arr[1000];
 
 
 	if (!head)
 		return (0);
 	if (!*head || (*head)->next == NULL)
 		return (1);
-	for (; seek; seek = seek->next, i)
+
+	for (; seek; seek = seek->next, i++)
 		arr[i] = seek->n;
 	for (i--; i > j; i--, j++)
 	{
