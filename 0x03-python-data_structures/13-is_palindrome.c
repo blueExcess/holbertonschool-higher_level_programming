@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 		arr[i] = seek->n;
 	for (i--; i > j; i--, j++)
 	{
-		if (arr[i] == arr[j])
+		if (arr[j] == arr[i])
 			test = 1;
 		else
 			test = 0;
