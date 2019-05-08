@@ -11,13 +11,14 @@
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *seek = *head;
-	int i = 0, j = 0, test = 0;
-	int arr[1000];
+	listint_t *seek;
+	int i = 0, j = 0;
+	int arr[4096];
 
 
 	if (!head)
 		return (0);
+	seek = *head;
 	if (!*head || (*head)->next == NULL)
 		return (1);
 
@@ -26,11 +27,9 @@ int is_palindrome(listint_t **head)
 	for (i--; i > j; i--, j++)
 	{
 		if (arr[j] == arr[i])
-			test = 1;
+			;
 		else
-			test = 0;
+			return (0);
 	}
-	if (test != 1)
-		return (0);
 	return (1);
 }
