@@ -20,7 +20,7 @@ int is_palindrome(listint_t **head)
 		return (0);
 	if (!*head || (*head)->next == NULL)
 		return (1);
-	for (; seek; seek = seek->next, i++)
+	for (; seek; seek = seek->next, i)
 		arr[i] = seek->n;
 	for (i--; i > j; i--, j++)
 	{
