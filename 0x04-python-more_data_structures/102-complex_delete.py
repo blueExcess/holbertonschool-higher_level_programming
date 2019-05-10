@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-void print_python_list(PyObject *p);
+def complex_delete(a_dictionary, value):
