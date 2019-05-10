@@ -9,7 +9,6 @@ def roman_to_int(rs):
     for i, num in enumerate(rs):
         nums.append(legend.get(num))
         total += nums[i]
-        if i > 0:
-            if nums[i] > nums[i - 1]:
+        if i > 0 and nums[i] > nums[i - 1]:
                 total -= (nums[i - 1] * 2)
     return total
