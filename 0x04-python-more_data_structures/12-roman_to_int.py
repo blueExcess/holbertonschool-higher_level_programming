@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(rs):
-    if rs is None or isinstance(rs, str) == False:
+    if rs is None or not isinstance(rs, str):
         return 0
     val, total = 0, 0
     nums = []
