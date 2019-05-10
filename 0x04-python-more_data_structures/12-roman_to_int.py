@@ -11,5 +11,5 @@ def roman_to_int(rs):
         total += nums[i]
         if i > 0:
             if nums[i] > nums[i - 1]:
-                total -= (1 + nums[i - 1])
+                total -= (nums[i - 1] * 2)
     return total
