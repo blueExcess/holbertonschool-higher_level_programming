@@ -49,5 +49,8 @@ class Square:
 
     def my_print(self):
         """Prints visualization of square to stdout with #."""
-        for x in range(0, self.__size):
-            print('#' * self.__size)
+        if self.__size == 0:
+            print()
+        else:
+            for x in range(0, self.__size):
+                print('#' * self.__size)
