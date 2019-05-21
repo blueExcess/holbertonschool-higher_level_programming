@@ -60,13 +60,13 @@ class Square:
         """Prints visualization of square to stdout with #."""
         value = self.__position
         x, y = value[0], value[1]
-        for i in range(0, y):
-            print()
         if self.__size == 0:
             print()
-        else:
-            for j in range(0, self.__size):
-                print(' ' * x + '#' * self.__size)
+            return
+        for i in range(0, y):
+            print()
+        for j in range(0, self.__size):
+            print(' ' * x + '#' * self.__size)
 
     @property
     def position(self):
