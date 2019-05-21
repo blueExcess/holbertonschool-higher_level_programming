@@ -59,8 +59,9 @@ class Square:
         """Prints visualization of square to stdout with #."""
         value = self.__position
         x, y = value[0], value[1]
-        print("\n" * y)
-        for i in range(0, self.__size):
+        for i in range(0, y):
+            print()
+        for j in range(0, self.__size):
             print(' ' * x + '#' * self.__size)
 
     @property
