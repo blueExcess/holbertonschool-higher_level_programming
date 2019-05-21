@@ -34,6 +34,9 @@ class Square:
     def size(self, value):
         """Setter function to set size value.
 
+        Args:
+            value (int): for setting the size of obj (must be int).
+
         Raises:
             TypeError: if value is not int.
             ValueError: if value is less than 0.
