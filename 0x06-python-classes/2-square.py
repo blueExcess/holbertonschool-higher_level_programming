@@ -10,6 +10,7 @@ class Square:
         ValueError: given int not above 0
     """
     def __init__(self, size=0):
+        """Inits class with given size."""
         self.__size = size
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
