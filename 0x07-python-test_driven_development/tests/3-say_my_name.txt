@@ -1,0 +1,20 @@
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+>>> x = [[1, 2, 3], [4, 5, 6]]
+>>> say_my_name(1, x)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name(x)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name('h', x)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+>>> d = {3:'hi', 9:'Time for dancing-party-time!'}
+>>> say_my_name(d.get(9))
+My name is Time for dancing-party-time!
+>>> say_my_name(d.get(9), d.get(3))
+My name is Time for dancing-party-time! hi
+>>> say_my_name(d.get(9), d.get(2))
+Traceback (most recent call last):
+TypeError: last_name must be a string
