@@ -1,7 +1,7 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 >>> text_indentation("""This is a test. Hooray? Fun tests are neat, and I \
-love bread: fun stuff.""")
+... love bread: fun stuff.""")
 This is a test.
 <BLANKLINE>
 Hooray?
@@ -11,7 +11,7 @@ Fun tests are neat, and I love bread:
 fun stuff.
 <BLANKLINE>
 >>> text_indentation("""This is a test. Hooray? Fun tests are neat, and I \
-love bread: fun stuff""")
+... love bread: fun stuff""")
 This is a test.
 <BLANKLINE>
 Hooray?
@@ -20,8 +20,8 @@ Fun tests are neat, and I love bread:
 <BLANKLINE>
 fun stuff
 >>> text_indentation("""      Here we are testing.If whitespace:is   \
-working correctly.    There should be no trailing?     Or beginning \
-whitespaces       """)
+... working correctly.    There should be no trailing?     Or beginning \
+... whitespaces       """)
 Here we are testing.
 <BLANKLINE>
 If whitespace:
