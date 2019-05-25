@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module for dividing everything in a matrix by something."""
 
+
 def matrix_divided(matrix, div):
     """Divide everything in matrix by div.
 
