@@ -51,4 +51,4 @@ def lazy_matrix_mul(m_a, m_b):
         raise TypeError
     a = np.array(m_a)
     b = np.array(m_b)
-    print(np.dot(a, b))
+    return (np.dot(a, b))
