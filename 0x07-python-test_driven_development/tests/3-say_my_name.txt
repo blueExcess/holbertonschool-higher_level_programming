@@ -12,7 +12,7 @@ Traceback (most recent call last):
 TypeError: last_name must be a string
 >>> d = {3:'hi', 9:'Time for dancing-party-time!'}
 >>> say_my_name(d.get(9))
-My name is Time for dancing-party-time!
+My name is Time for dancing-party-time! 
 >>> say_my_name(d.get(9), d.get(3))
 My name is Time for dancing-party-time! hi
 >>> say_my_name(d.get(9), d.get(2))
