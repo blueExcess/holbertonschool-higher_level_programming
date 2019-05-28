@@ -5,6 +5,9 @@
 class Rectangle():
     """Class used to create Rectangle objects.
 
+    Attributes:
+        number_of_instances: number of instances currently existing
+
     Args:
         width (int): width of the rectangle.
         height (int): height of the rectangle.
