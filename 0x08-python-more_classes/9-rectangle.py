@@ -98,4 +98,5 @@ class Rectangle():
 
     @classmethod
     def square(cls, size=0):
+        """For creating a square-type object."""
         return cls(size, size)
