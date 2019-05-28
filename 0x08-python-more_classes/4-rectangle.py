@@ -70,4 +70,5 @@ class Rectangle():
 
     def __repr__(self):
         """For returning something silly."""
-        return "Rectangle({}, {})".format(self.width, self.height)
+        return "{}({}, {})".format(type(self).__name__,
+                                   self.width, self.height)
