@@ -19,7 +19,15 @@ class Student():
     def to_json(self, attrs=None):
         """Returns __dict__ of object."""
         x = self.__dict__
-        if not attrs is None:
-            for k, v in x:
-                if k in attrs:
-                    
+        if attrs is None:
+            return self.__dict__
+        if not type(attrs) is list:
+            return self.__dict__
+        for i in attrs:
+            if not type(i) is str:
+                return self.__dict__
+        z = {}
+        for k, v in x.items():
+            if k in attrs:
+                z.update({k: v})
+        return z
