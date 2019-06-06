@@ -1,1 +1,0 @@
-vagrant@vagrant-ubuntu-trusty-64.19122:1559423455
