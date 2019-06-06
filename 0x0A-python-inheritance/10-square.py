@@ -47,6 +47,7 @@ class Rectangle(BaseGeometry):
         """Return a different thing than normal. Yay!"""
         return "[Rectangle] {:d}/{:d}".format(self.__width, self.__height)
 
+
 class Square(Rectangle):
     """A type of shape that's a bit... square.
 
