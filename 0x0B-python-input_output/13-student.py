@@ -34,4 +34,6 @@ class Student():
 
     def reload_from_json(self, json):
         """take dict object and overwrite attributes with new ones."""
+        if bool(json) is False:
+            return
         self.__dict__ = json
