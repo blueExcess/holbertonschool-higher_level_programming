@@ -3,6 +3,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Rectangle class.
 
@@ -100,18 +101,23 @@ class Rectangle(Base):
                                                 self.x, self.y, self.width,
                                                 self.height)
 
-        def update(self, *args, **kwargs):
-            """To update stuff."""
-            i = 0
-            for ack in args:
-                i += 1
-                if i == 1:
-                    self.id = ack
-                if i == 2:
-                    self.width = ack
-                if i == 3:
-                    self.height = ack
-                if i == 4:
-                    self.x = ack
-                if i == 5:
-                    self.y = ack
+    def update(self, *args, **kwargs):
+        """To update stuff."""
+        i = 0
+        for value in args:
+            i += 1
+            if i == 1:
+                self.id = value
+            if i == 2:
+                self.width = value
+            if i == 3:
+                self.height = value
+            if i == 4:
+                self.x = value
+            if i == 5:
+                self.y = value
+        accepted = ['id', 'width', 'height', 'x', 'y']
+        if len(args) == 0:
+            for k, v in kwargs.items():
+                if k in accepted:
+                    setattr(self, k, v)
