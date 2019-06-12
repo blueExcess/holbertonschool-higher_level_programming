@@ -3,6 +3,8 @@
 
 import io
 import unittest
+import importlib as il
+from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 
 

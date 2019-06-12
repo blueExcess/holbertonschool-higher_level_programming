@@ -3,6 +3,7 @@
 
 
 import json
+import os
 
 
 class Base():
@@ -64,3 +65,29 @@ class Base():
             fool = cls(1)
             fool.update(**dictionary)
             return fool
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances."""
+
+        if os.path.isfile("{}.json".format(cls.__name__)):
+            pass
+
+    def draw(list_rectangles, list_squares):
+        """Will open a window and draw a lovely turtle."""
+        colors = []
+        win = turtle.Screen()
+        win.title("Dumb Squares")
+        t = turtle.Turtle()
+        for cls in list_rectangle + list_squares:
+            t.penup()
+            t.goto(cls.x, cls.y)
+            t.pendown()
+            t.setheading(0)
+            t.forward(cls.width)
+            t.right(90)
+            t.forward(cls.height)
+            t.right(90)
+            t.forward(cls.width)
+            t.right(90)
+            t.forward(cls.height)
