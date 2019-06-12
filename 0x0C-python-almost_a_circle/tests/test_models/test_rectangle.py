@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Unittests for Rectangle model."""
 
-
+import io
 import unittest
 from models.rectangle import Rectangle
 
@@ -64,3 +64,33 @@ class Test_Rectangle(unittest.TestCase):
             q = Rectangle(33, 1, 19, set([1, 22, 2, 2]))
         with self.assertRaises(ValueError, msg='y must be > 0'):
             r = Rectangle(3, 1, 8, -14)
+
+    def test_area(self):
+        """Test to make sure area() method outputs as expected."""
+        a = Rectangle(4, 5)
+        b = a.area()
+        self.assertEqual(b, 20)
+
+    def test_display(self):
+        a = Rectangle(3, 2)
+        s = "###\n###\n"
+        f = io.StringIO()
+        with redirect_stdout(f):
+            a.display()
+        self.assertEqual(f.getvalue(), s)
+
+    def test_display_xy(self):
+        a = Rectangle(4, 3, 2, 3)
+        s = "\n\n\n  ####\n  ####\n  ####\n"
+        f = io.StringIO()
+        with redirect_stdout(f):
+            a.display()
+        self.assertEqual(f.getvalue(), s)
+
+    def test_str(self):
+        a = Rectangle(1, 2, 3, 4, 5)
+        s = "[Rectangle] (5) 3/4 - 1/2"
+        self.assertEqual(print(a), s)
+
+    def test_update(self):
+        
