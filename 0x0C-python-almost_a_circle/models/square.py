@@ -45,3 +45,8 @@ class Square(Rectangle):
             for k, v in kwargs.items():
                 if k in accepted:
                     setattr(self, k, v)
+
+    def to_dictionary(self):
+        """Returns a dict representation of object for json use."""
+        a = {'id':self.id, 'size':self.size, 'x':self.x, 'y':self.y}
+        return a
