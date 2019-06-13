@@ -4,12 +4,12 @@
 
 import io
 import unittest
-import importlib as il
+import importlib
 from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 from models.base import Base
 import models.base
-import models.rectangles
+import models.rectangle
 
 
 class Test_Rectangle(unittest.TestCase):
@@ -20,7 +20,6 @@ class Test_Rectangle(unittest.TestCase):
         importlib.reload(models.square)
         importlib.reload(models.rectangle)
         importlib.reload(models.base)
-
 
     def test_init(self):
         a = Rectangle(2, 3)
@@ -101,7 +100,7 @@ class Test_Rectangle(unittest.TestCase):
     def test_str(self):
         a = Rectangle(1, 2, 3, 4, 5)
         s = "[Rectangle] (5) 3/4 - 1/2"
-        self.assertEqual(print(a), s)
+        self.assertEqual(str(a), s)
 
     def test_update(self):
         pass

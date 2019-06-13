@@ -4,7 +4,7 @@
 
 import io
 import unittest
-import importlib as il
+import importlib
 from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
@@ -30,17 +30,17 @@ class Test_Square(unittest.TestCase):
         self.assertEqual(a.y, 0)
         self.assertEqual(a.id, 1)
         b = Square(1, 9, 2)
-        self.assertEqual(b.size, 5)
+        self.assertEqual(b.size, 1)
         self.assertEqual(b.x, 9)
         self.assertEqual(b.y, 2)
         self.assertEqual(b.id, 2)
         c = Square(4, 2, 5, 12)
-        self.assertEqual(c.size, 23)
+        self.assertEqual(c.size, 4)
         self.assertEqual(c.x, 2)
         self.assertEqual(c.y, 5)
         self.assertEqual(c.id, 12)
         d = Square(9, 3)
-        self.assertEqual(d.size, 6)
+        self.assertEqual(d.size, 9)
         self.assertEqual(d.x, 3)
         self.assertEqual(d.y, 0)
         self.assertEqual(d.id, 3)
@@ -69,10 +69,10 @@ class Test_Square(unittest.TestCase):
         """Test to make sure area() method outputs as expected."""
         a = Square(4, 5)
         b = a.area()
-        self.assertEqual(b, 12)
+        self.assertEqual(b, 16)
 
     def test_display(self):
-        a = Square(3, 2)
+        a = Square(3)
         s = "###\n###\n###\n"
         f = io.StringIO()
         with redirect_stdout(f):
@@ -89,5 +89,5 @@ class Test_Square(unittest.TestCase):
 
     def test_str(self):
         a = Square(1, 2, 3, 4)
-        s = "[Square] (5) 3/4 - 1"
-        self.assertEqual(print(a), s)
+        s = "[Square] (4) 2/3 - 1"
+        self.assertEqual(str(a), s)
