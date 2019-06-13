@@ -8,6 +8,8 @@ import importlib as il
 from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 from models.base import Base
+import models.base
+import models.rectangles
 
 
 class Test_Rectangle(unittest.TestCase):

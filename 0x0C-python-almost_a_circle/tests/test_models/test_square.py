@@ -9,6 +9,9 @@ from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
+import models.base
+import models.rectangle
+import models.square
 
 
 class Test_Square(unittest.TestCase):
