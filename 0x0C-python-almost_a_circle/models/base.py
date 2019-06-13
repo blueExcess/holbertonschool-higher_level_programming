@@ -104,3 +104,13 @@ class Base():
             t.right(90)
             t.forward(cls.height)
             i += 1
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save list of objects to csv file."""
+        pass
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Load from .csv file to python obj."""
+        pass
