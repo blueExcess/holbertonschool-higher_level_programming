@@ -21,7 +21,7 @@ class Base():
     def to_json_string(list_dictionaries):
         """Returns a list of dictionaries for fun and profit."""
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            a = '[]'
+            a = []
             return a
         return json.dumps(list_dictionaries)
 
