@@ -90,7 +90,7 @@ class Base():
         win.title("Dumb Squares")
         t = turtle.Turtle()
         i = 0
-        for cls in list_rectangle + list_squares:
+        for cls in list_rectangles + list_squares:
             t.color(colors[i])
             t.penup()
             t.goto(cls.x, cls.y)
