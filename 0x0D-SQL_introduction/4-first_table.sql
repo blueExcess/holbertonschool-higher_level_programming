@@ -1,0 +1,2 @@
+-- 4. create a new table in current db
+-- will be called first_table
