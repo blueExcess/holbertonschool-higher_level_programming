@@ -1,0 +1,2 @@
+-- 7. Insert a new row into table.
+-- id = 89, name = Holberton School

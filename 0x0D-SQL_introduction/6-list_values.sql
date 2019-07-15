@@ -1,0 +1,2 @@
+-- 6. List all rows of table "first_table"
+-- all fields should be printed.
