@@ -1,0 +1,2 @@
+-- 9. Create second table "second_table" and add data
+-- id INT, name VARCHAR(256), score INT
