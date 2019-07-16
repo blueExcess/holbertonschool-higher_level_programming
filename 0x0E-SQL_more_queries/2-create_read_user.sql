@@ -1,0 +1,2 @@
+-- 2. create a database and a user
+-- only select priviledge and no fail.

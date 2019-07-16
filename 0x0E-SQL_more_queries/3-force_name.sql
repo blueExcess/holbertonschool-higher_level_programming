@@ -1,0 +1,2 @@
+-- 3. create a silly table
+-- no fail
