@@ -1,0 +1,2 @@
+-- 10. list all shows in db that have at least one genre
+-- download thingy and import to mysql

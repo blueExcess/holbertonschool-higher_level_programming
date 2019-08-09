@@ -1,0 +1,2 @@
+-- 9. list all cities contained in db
+-- only use one SELECT statement
