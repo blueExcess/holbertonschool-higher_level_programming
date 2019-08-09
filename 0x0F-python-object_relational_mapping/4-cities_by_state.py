@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Make #2 safe from sql injection
+# Print states by cities
 
 
 from sys import argv
