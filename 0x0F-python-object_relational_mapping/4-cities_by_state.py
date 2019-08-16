@@ -12,8 +12,12 @@ if __name__ == "__main__":
                          passwd=password, db=database)
     cur = db.cursor()
     cur.execute("SELECT cities.id, cities.name, states.name \
-    FROM hbtn_0e_4_usa.cities \
-    INNER JOIN hbtn_0e_0_usa.states ON states.id = cities.state_id")
+        FROM cities INNER JOIN states ON states.id = cities.state_id \
+        ORDER BY cities.id ASC;")
+    # cur.execute("SELECT cities.id, cities.name, states.name \
+    # FROM hbtn_0e_4_usa.cities \
+    # INNER JOIN hbtn_0e_0_usa.states ON states.id = cities.state_id \
+    # ORDER BY cities.id ASC")
 
     querry = cur.fetchall()
     for row in querry:
