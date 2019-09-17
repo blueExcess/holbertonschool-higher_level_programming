@@ -1,9 +1,8 @@
 #!/usr/bin/node
 /* 3. print first argument passed to script. */
-const arr = process.argv;
-const len = arr.length;
-if (len === 2) {
+const arr = process.argv[2];
+if (arr === undefined) {
   console.log('No argument');
-} else if (len === 3) {
-  console.log(arr[2]);
+} else {
+  console.log(arr);
 }
