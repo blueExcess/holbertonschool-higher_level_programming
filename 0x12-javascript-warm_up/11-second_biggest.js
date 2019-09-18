@@ -19,6 +19,10 @@ for (let i = 2; i < len; i++) {
   if (bigger < x) {
     big = bigger;
     bigger = x;
-  }
+  } else if (big < x) {
+    big = x;
+    }
 }
 console.log(big);
+
+/* not working properly with floats. */
