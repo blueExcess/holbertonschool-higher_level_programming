@@ -4,11 +4,9 @@ const args = process.argv.slice(2);
 const len = args.length;
 if (len <= 1) {
   console.log(0);
-  return;
+  process.exit();
 }
 
-// let bigger = args[0];
-// let big = args[1];
 let bigger = parseInt(args[0], 10);
 let big = parseInt(args[1], 10);
 if (bigger < big) {
@@ -17,7 +15,7 @@ if (bigger < big) {
 }
 
 for (let i = 2; i < len; i++) {
-  let x = parseInt(args[i], 10);
+  const x = parseInt(args[i], 10);
   if (bigger < x) {
     big = bigger;
     bigger = x;
