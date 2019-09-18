@@ -21,7 +21,7 @@ for (let i = 2; i < len; i++) {
     bigger = x;
   } else if (big < x) {
     big = x;
-    }
+  }
 }
 console.log(big);
 
