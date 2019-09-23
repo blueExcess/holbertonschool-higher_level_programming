@@ -1,8 +1,8 @@
 #!/usr/bin/node
 /* 0. Write a class Rectangle that defines a rectangle. */
 class Rectangle {
-  constructor() {
-   }
+  // constructor() {
+  //  }
 }
 
-module.exports = Rectangle
+module.exports = Rectangle;
