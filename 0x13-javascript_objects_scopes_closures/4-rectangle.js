@@ -20,16 +20,16 @@ class Rectangle {
 
   // rotate width and height.
   rotate () {
-    let temp = this.width;
+    const temp = this.width;
     this.width = this.height;
     this.height = temp;
-    }
+  }
 
   // double width and height of object.
   double () {
     this.width = this.width * 2;
     this.height = this.height * 2;
-    }
+  }
 }
 
 module.exports = Rectangle;
