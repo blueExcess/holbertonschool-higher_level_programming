@@ -2,7 +2,12 @@
 /* 13 (adv). Open and concat two files into a third. */
 
 const fs = require('fs');
-const file1 = fs.readFileSync('./fileA', 'utf8');
-const file2 = fs.readFileSync('./fileB', 'utf8');
-fs.appendFileSync('./fileC', file1, 'utf8');
-fs.appendFileSync('./fileC', file2, 'utf8');
+const args = process.argv.slice(2);
+
+const sourceA = args[0];
+const sourceB = args[1];
+const dest = args[2];
+const file1 = fs.readFileSync(sourceA, 'utf8');
+const file2 = fs.readFileSync(sourceB, 'utf8');
+fs.appendFileSync(dest, file1, 'utf8');
+fs.appendFileSync(dest, file2, 'utf8');
