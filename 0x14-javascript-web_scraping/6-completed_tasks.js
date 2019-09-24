@@ -19,7 +19,7 @@ request.get(url, (err, resp, body) => {
     dict[value] = 0;
   });
   for (const item of JSON.parse(body)) {
-    if (item.completed == true) {
+    if (item.completed === true) {
       dict[item.userId]++;
       // dict[item.userId].push(item.completed);
     }
