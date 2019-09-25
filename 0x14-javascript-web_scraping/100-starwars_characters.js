@@ -10,6 +10,7 @@ const url = 'http://swapi.co/api/films/' + id;
 request.get(url, (err, response, body) => {
   if (err) throw err;
   const charList = JSON.parse(body).characters;
+  // querry for each URL given to get character name
   for (let i = 0; i < charList.length; i++) {
     request.get(charList[i], (error, response, body) => {
       if (error) throw error;
