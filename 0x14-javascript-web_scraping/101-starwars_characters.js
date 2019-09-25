@@ -27,7 +27,7 @@ request.get(url, (err, response, body) => {
         }
       }
       // console.log(JSON.parse(body).name); // debug
-      console.log(charDict); // debug
+      // console.log(charDict); // debug
     });
   }
 });
